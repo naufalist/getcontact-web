@@ -1,0 +1,117 @@
+* {
+  font-family: Quicksand, sans-serif;
+  font-size: 15px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 10vh;
+  margin-bottom: 60px;
+}
+
+nav {
+  box-shadow: rgba(141, 150, 170, 0.4) 0 1px 4px 0;
+}
+
+/* Badge Colors - Light Theme */
+.badge.bg-soft-light {
+  color: #495057;
+}
+
+.badge.bg-soft-primary {
+  color: #10335b;
+}
+
+.badge.bg-soft-success {
+  color: #19490a;
+}
+
+.badge.bg-soft-danger {
+  color: #660017;
+}
+
+/* Background Soft Colors - Light Theme */
+.bg-soft-light {
+  --bs-bg-opacity: 1;
+  background-color: #fcfcfd;
+}
+
+.bg-soft-primary {
+  --bs-bg-opacity: 1;
+  background-color: #d4e6f9;
+}
+
+.bg-soft-success {
+  --bs-bg-opacity: 1;
+  background-color: #d9f0d1;
+}
+
+.bg-soft-danger {
+  --bs-bg-opacity: 1;
+  background-color: #ffccd7;
+}
+
+/* Badge Colors - Dark Theme */
+[data-bs-theme="dark"] .badge.bg-soft-light {
+  color: #f8f9fa;
+}
+
+[data-bs-theme="dark"] .badge.bg-soft-primary {
+  color: #7db3ee;
+}
+
+[data-bs-theme="dark"] .badge.bg-soft-success {
+  color: #7aff4d;
+}
+
+[data-bs-theme="dark"] .badge.bg-soft-danger {
+  color: #f68;
+}
+
+/* Background Soft Colors - Dark Theme */
+[data-bs-theme="dark"] .bg-soft-light {
+  --bs-bg-opacity: 1;
+  background-color: #373a3c;
+}
+
+[data-bs-theme="dark"] .bg-soft-primary {
+  --bs-bg-opacity: 1;
+  background-color: #081a2d;
+}
+
+[data-bs-theme="dark"] .bg-soft-success {
+  --bs-bg-opacity: 1;
+  background-color: #0d2405;
+}
+
+[data-bs-theme="dark"] .bg-soft-danger {
+  --bs-bg-opacity: 1;
+  background-color: #33000b;
+}
+
+/* Input Readonly States */
+input[readonly] {
+  opacity: 1 !important;
+}
+
+[data-bs-theme="dark"] input[readonly] {
+  color: #858585 !important;
+}
+
+[data-bs-theme="light"] input[readonly] {
+  background-color: #e9ecef !important;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
