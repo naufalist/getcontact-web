@@ -8,7 +8,7 @@ date_default_timezone_set('Asia/Jakarta');
 
 header("Content-Type: application/json");
 
-require_once '../getcontact.php';
+require_once __DIR__ . "/../modules/getcontact.php";
 
 try {
 
