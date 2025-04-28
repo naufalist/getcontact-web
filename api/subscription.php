@@ -160,7 +160,7 @@ try {
   ]);
   exit;
 } catch (\Exception $e) {
-  error_log("Error GetContact API Subscription: " . $ex->getMessage());
+  error_log("Error GetContact API Subscription: " . $e->getMessage());
   http_response_code(500);
   echo json_encode([
     "message" => "Internal server error"
