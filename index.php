@@ -6,8 +6,8 @@ ini_set('error_log', 'errors.log');
 error_reporting(E_ALL);
 date_default_timezone_set('Asia/Jakarta');
 
-require_once 'getcontact.php';
-require_once "config.php";
+require_once __DIR__ . "/modules/getcontact.php";
+require_once __DIR__ . "/config.php";
 
 try {
   switch ($_SERVER["REQUEST_METHOD"]) {
