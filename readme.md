@@ -84,6 +84,8 @@ To obtain the final key and token from the GetContact app, I used an Android sma
    ]));
    ```
 
+Alternatively, you can use an external tool here: [https://tools.naufalist.com/getcontact/credentials/generate](https://tools.naufalist.com/getcontact/credentials/generate), to automatically generate the credentials.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 

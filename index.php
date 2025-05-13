@@ -259,6 +259,14 @@ try {
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="javascript:void(0);" tabindex="-1"><i class="fa fa-search"></i> Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://tools.naufalist.com/getcontact/credentials/generate" target="_blank" tabindex="-1"><i class="fa fa-key"></i> Generate Credentials</a>
+          </li>
+        </ul>
         <ul class="navbar-nav ms-md-auto">
           <li class="nav-item dropdown" data-bs-theme="dark">
             <a class="nav-link dropdown-toggle align-items-center" href="#" id="theme-menu" aria-expanded="false"
@@ -456,12 +464,12 @@ try {
                 <div class="col-sm-9">
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="source_type" id="source-type-search" value="search" <?php echo isset($old_values["source_type"]) && $old_values["source_type"] == "search" ? "checked" : "" ?>>
-                    <label class="form-check-label" for="source-type-search">Search (View Profile Picture) <span id="display-view-profile-limit" class="badge bg-soft-primary" data-bs-theme="light">Limit: -/-</span>
+                    <label class="form-check-label" for="source-type-search">Search (View Profile Picture) <span id="display-view-profile-limit" class="badge bg-soft-primary" data-bs-theme="light">Remaining: -/-</span>
                     </label>
                   </div>
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="source_type" id="source-type-profile" value="profile" <?php echo isset($old_values["source_type"]) && $old_values["source_type"] == "profile" ? "checked" : "" ?>>
-                    <label class="form-check-label" for="source-type-profile">Profile (View Tags) <span id="display-view-tags-limit" class="badge bg-soft-primary" data-bs-theme="light">Limit: -/-</span></label>
+                    <label class="form-check-label" for="source-type-profile">Profile (View Tags) <span id="display-view-tags-limit" class="badge bg-soft-primary" data-bs-theme="light">Remaining: -/-</span></label>
                     <div class="invalid-feedback"></div>
                   </div>
                 </div>
