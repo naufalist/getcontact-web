@@ -456,12 +456,12 @@ try {
                 <div class="col-sm-9">
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="source_type" id="source-type-search" value="search" <?php echo isset($old_values["source_type"]) && $old_values["source_type"] == "search" ? "checked" : "" ?>>
-                    <label class="form-check-label" for="source-type-search">Search (View Profile Picture) <span id="display-view-profile-limit" class="badge bg-soft-primary" data-bs-theme="light">Limit: -/-</span>
+                    <label class="form-check-label" for="source-type-search">Search (View Profile Picture) <span id="display-view-profile-limit" class="badge bg-soft-primary" data-bs-theme="light">Remaining: -/-</span>
                     </label>
                   </div>
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="source_type" id="source-type-profile" value="profile" <?php echo isset($old_values["source_type"]) && $old_values["source_type"] == "profile" ? "checked" : "" ?>>
-                    <label class="form-check-label" for="source-type-profile">Profile (View Tags) <span id="display-view-tags-limit" class="badge bg-soft-primary" data-bs-theme="light">Limit: -/-</span></label>
+                    <label class="form-check-label" for="source-type-profile">Profile (View Tags) <span id="display-view-tags-limit" class="badge bg-soft-primary" data-bs-theme="light">Remaining: -/-</span></label>
                     <div class="invalid-feedback"></div>
                   </div>
                 </div>

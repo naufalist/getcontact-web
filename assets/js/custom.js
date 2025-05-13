@@ -269,8 +269,8 @@ $(document).ready(function () {
 
   // event listener for change event on select final key & token
   $('#final-key-token').on('change', function () {
-    $("#display-view-profile-limit").text(`Limit: -/-`);
-    $("#display-view-tags-limit").text(`Limit: -/-`);
+    $("#display-view-profile-limit").text(`Remaining: -/-`);
+    $("#display-view-tags-limit").text(`Remaining: -/-`);
     $("#display-expired-at").text(`Expired at: -`);
 
     const [finalKey, token] = $("#final-key-token").val().split("[delim]");
@@ -312,8 +312,8 @@ $(document).ready(function () {
         const numberDetailLimit = response.data.info.numberDetail.limit ?? "-";
         const receiptEndDate = response.data.info.receiptEndDate ?? "-";
 
-        $("#display-view-profile-limit").text(`Limit: ${searchRemainingCount}/${searchLimit}`);
-        $("#display-view-tags-limit").text(`Limit: ${numberDetailRemainingCount}/${numberDetailLimit}`);
+        $("#display-view-profile-limit").text(`Remaining: ${searchRemainingCount}/${searchLimit}`);
+        $("#display-view-tags-limit").text(`Remaining: ${numberDetailRemainingCount}/${numberDetailLimit}`);
         $("#display-expired-at").text(`Expired at: ${receiptEndDate}`);
 
         if (Number.isInteger(searchRemainingCount) && searchRemainingCount > 0 ||
@@ -355,8 +355,8 @@ $(document).ready(function () {
       $('#final-key').val('3a2adf118bb013b99f492c8419592cd7940cdb344320e02aa74a1b877094886a');
       $('#token').val('bxuIUB07327befeadca081fdc2d97d39dd06734a623dc37a172572371f');
 
-      $('#display-view-profile-limit').text('Limit: -/-');
-      $('#display-view-tags-limit').text('Limit: -/-');
+      $('#display-view-profile-limit').text('Remaining: -/-');
+      $('#display-view-tags-limit').text('Remaining: -/-');
       $('#display-expired-at').text('Expired at: -');
 
       $('#submit-btn').prop('disabled', true);
