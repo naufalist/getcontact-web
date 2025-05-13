@@ -259,6 +259,14 @@ try {
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="javascript:void(0);" tabindex="-1"><i class="fa fa-search"></i> Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://tools.naufalist.com/getcontact/credentials/generate" target="_blank" tabindex="-1"><i class="fa fa-key"></i> Generate Credentials</a>
+          </li>
+        </ul>
         <ul class="navbar-nav ms-md-auto">
           <li class="nav-item dropdown" data-bs-theme="dark">
             <a class="nav-link dropdown-toggle align-items-center" href="#" id="theme-menu" aria-expanded="false"
