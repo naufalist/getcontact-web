@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/naufalist/getcontact-web">
-    <img src="assets/images/getcontact.webp" alt="Logo" height="125">
+    <img src="public/images/getcontact.webp" alt="Logo" height="125">
   </a>
 
   <h3 align="center">GetContact PHP (Web)</h3>
@@ -33,9 +33,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About
 <p align="center">
-  <img src="assets/images/screenshot.png" alt="Screenshot Form"/>
-  <img src="assets/images/screenshot2.png" alt="Screenshot Profile"/>
-  <img src="assets/images/screenshot3.png" alt="Screenshot Download Tags"/>
+  <img src="public/images/screenshot.png" alt="Screenshot Form"/>
+  <img src="public/images/screenshot2.png" alt="Screenshot Profile"/>
+  <img src="public/images/screenshot3.png" alt="Screenshot Download Tags"/>
 </p>
 
 My friends often ask me to check the tags or profile of a phone number using GetContact because they don’t have the app. I used to do it manually — I would check the number, take a screenshot of the result, and send it to them. With this script, things are much easier. Now they can check it themselves by submitting the number through a form, and they can even download the result as an image. (***getcontact credentials (final key & token) must be stored in the config file (config.php).***).
@@ -69,7 +69,7 @@ To obtain the final key and token from the GetContact app, I used an Android sma
    ```
 2. Find `FINAL_KEY` and `TOKEN`
    
-   <img src="assets/images/obtain_fk_and_token.png" alt="How to get GetContact Final Key & Token" height="150">
+   <img src="public/images/obtain_fk_and_token.png" alt="How to get GetContact Final Key & Token" height="150">
 
 3. Copy and paste both values into the configuration file: `config.php`.
    
