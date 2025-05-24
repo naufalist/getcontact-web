@@ -115,3 +115,14 @@ input[readonly] {
   line-height: 60px;
   text-align: center;
 }
+
+/* Custom style for Notyf */
+.notyf__toast {
+  max-width: 50em !important;
+
+}
+
+.notyf__ripple {
+  height: 60em;
+  width: 60em;
+}
