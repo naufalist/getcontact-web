@@ -524,9 +524,9 @@ $csrf_token = csrf_token_generate();
         $el.removeClass("is-invalid is-valid");
         $el.next("div.invalid-feedback").text("");
       });
-      const decodedImage = (atob(image)).replace(/\\\//g, "/"); // convert \/ to /
-      console.log(decodedImage);
-      $("#captcha-image").attr("src", `data:image/png;base64,${decodedImage}`);
+      // const decodedImage = (atob(image)).replace(/\\\//g, "/"); // convert \/ to /
+      console.log(image);
+      $("#captcha-image").attr("src", `data:image/png;base64,${image}`);
       $("#captcha-image").show();
     }
 
