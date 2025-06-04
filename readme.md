@@ -22,16 +22,17 @@
   </p>
 </div>
 
-
 ## Note
+
 - __2025-03-31__
   This script may not work perfectly yet, and currently it can only retrieve subscription data, view profiles, and search tags. Reverse engineering is necessary to further enhance the features of the script I have made.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
 <!-- ABOUT THE PROJECT -->
+
 ## About
+
 <p align="center">
   <img src="public/images/screenshot.png" alt="Screenshot Form"/>
   <img src="public/images/screenshot2.png" alt="Screenshot Profile"/>
@@ -39,6 +40,20 @@
 </p>
 
 My friends often ask me to check the tags or profile of a phone number using GetContact because they don’t have the app. I used to do it manually — I would check the number, take a screenshot of the result, and send it to them. With this script, things are much easier. Now they can check it themselves by submitting the number through a form, and they can even download the result as an image. (***getcontact credentials (final key & token) must be stored in the config file (config.php).***).
+
+### Features
+
+* **Search**
+  * You can search for both profiles and tags.
+* **Manage Credentials***
+  * Add, update, or delete credentials. Each credential includes: `client device id`, `final key`, `token`, and `description` field for notes or info about the credential.
+* **Verify Captcha***
+  * If a credential gets a 403 Forbidden error, you can validate the captcha through the web interface.
+* **Auto Generate Credential***
+  * You can generate the final key and token directly from the website without needing to log in manually through the mobile app.
+
+> :information_source: Features marked with an asterisk are available in the dashboard at `/dashboard`.
+> Default login (user/pass): `admin` / `admin`.
 
 ### Built With
 
@@ -56,23 +71,22 @@ To run this app, you need PHP and/or web server in your environment. You can use
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-### How to get GetContact Final Key & Token
+## How to get GetContact Final Key & Token (Manual)
 
 To obtain the final key and token from the GetContact app, I used an Android smartphone with ROOT access enabled. You can use either a real device or an emulator (such as MEmu, LDPlayer, etc.).
 
 > Make sure you’re already logged in to GetContact on your smartphone.
+
 1. Open file manager, find `GetContactSettingsPref.xml` in this directory:
+
    ```sh
    /data/data/app.source.getcontact/shared_prefs/GetContactSettingsPref.xml
    ```
 2. Find `FINAL_KEY` and `TOKEN`
-   
-   <img src="public/images/obtain_fk_and_token.png" alt="How to get GetContact Final Key & Token" height="150">
 
+   <img src="public/images/obtain_fk_and_token.png" alt="How to get GetContact Final Key & Token" height="150">
 3. Copy and paste both values into the configuration file: `config.php`.
-   
+
    ```php
    // just example
    define("GTC_CREDENTIALS", json_encode([
@@ -84,23 +98,30 @@ To obtain the final key and token from the GetContact app, I used an Android sma
    ]));
    ```
 
-Alternatively, you can use an external tool here: [https://tools.naufalist.com/getcontact/credentials/generate](https://tools.naufalist.com/getcontact/credentials/generate), to automatically generate the credentials.
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## How to get GetContact Final Key & Token (Automatic)
+
+You can use an external tool here: [https://tools.naufalist.com/getcontact/credentials/generate](https://tools.naufalist.com/getcontact/credentials/generate), or you can do this by yourself from `/dashboard/credentials/generate`.
+
+> :exclamation: Due to some limitations, the generate process from the web might sometimes fail because of rate limiting. Therefore, I recommend that you generate the credentials yourself using the feature already available on your local setup.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Installation
 
 1. Clone the repository. If you’re using XAMPP/Laragon/MAMP, place it in the htdocs directory.
+
    ```sh
    git clone https://github.com/naufalist/getcontact-web.git
    ```
 2. In **config.php**, you should update the credentials.
-   
+
    > The number of credentials you can choose in the form depends on how many credential entries you’ve added.
-   
+   >
+
    ```php
    // just example
    define("GTC_CREDENTIALS", json_encode([
@@ -121,10 +142,9 @@ Alternatively, you can use an external tool here: [https://tools.naufalist.com/g
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
-## Usage
+
+## Usage (Search feature)
 
 1. Access this site: `http://localhost/getcontact-web`.
 2. Enter the phone number into the form, for example: `081234567890`.
@@ -136,27 +156,24 @@ Alternatively, you can use an external tool here: [https://tools.naufalist.com/g
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 This repo is under [MIT License](https://opensource.org/licenses/mit-license.php)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 [@naufalist](https://twitter.com/naufalist) - contact.naufalist@gmail.com
