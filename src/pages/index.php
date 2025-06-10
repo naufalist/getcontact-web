@@ -45,6 +45,7 @@ try {
       #region Validate credential id
 
       $decrypted_id = decrypt_data($credential_id);
+      $decrypted_id = (int)$decrypted_id;
 
       if (!isset($decrypted_id) || !is_int($decrypted_id) || $decrypted_id <= 0) {
         error_log("Decryption failed for ID: $credential_id");

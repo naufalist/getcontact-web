@@ -79,6 +79,7 @@ try {
 
   $id = $parsed_json["id"] ?? null;
   $decrypted_id = decrypt_data($id);
+  $decrypted_id = (int)$decrypted_id;
 
   if (!isset($decrypted_id) || !is_int($decrypted_id) || $decrypted_id <= 0) {
     error_log("Decryption failed for ID: $id");
