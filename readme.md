@@ -39,7 +39,7 @@
   <img src="public/images/screenshot3.png" alt="Screenshot Download Tags"/>
 </p>
 
-My friends often ask me to check the tags or profile of a phone number using GetContact because they don’t have the app. I used to do it manually — I would check the number, take a screenshot of the result, and send it to them. With this script, things are much easier. Now they can check it themselves by submitting the number through a form, and they can even download the result as an image. (***getcontact credentials (final key & token) must be stored in the config file (config.php).***).
+My friends often ask me to check the tags or profile of a phone number using GetContact because they don’t have the app. I used to do it manually — I would check the number, take a screenshot of the result, and send it to them. With this script, things are much easier. Now they can check it themselves by submitting the number through a form, and they can even download the result as an image. (***getcontact credentials (final key & token) must be stored in the config file (src/configurations/getcontact.php).***).
 
 ### Features
 
@@ -85,7 +85,7 @@ To obtain the final key and token from the GetContact app, I used an Android sma
 2. Find `FINAL_KEY` and `TOKEN`
 
    <img src="public/images/obtain_fk_and_token.png" alt="How to get GetContact Final Key & Token" height="150">
-3. Copy and paste both values into the configuration file: `config.php`.
+3. Copy and paste both values into the configuration file: `src/configurations/getcontact.php`.
 
    ```php
    // just example
@@ -117,7 +117,7 @@ You can use an external tool here: [https://tools.naufalist.com/getcontact/crede
    ```sh
    git clone https://github.com/naufalist/getcontact-web.git
    ```
-2. In **config.php**, you should update the credentials.
+2. In **src/configurations/getcontact.php**, you should update the credentials.
 
    > The number of credentials you can choose in the form depends on how many credential entries you’ve added.
    >
