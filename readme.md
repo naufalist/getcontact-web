@@ -24,7 +24,12 @@
 
 ## Note
 
+- __2026-06-20__
+
+  It appears that newer versions of GetContact use a different approach for storing both the final key and authentication token. Since I have not yet conducted any analysis or experimentation on the latest releases, I cannot confirm the exact storage mechanism used in those versions. For the time being, you may try downgrading GetContact to a 7.x.x release (for example, version 7.2.0). Based on the last information I remember, version 7 still used the older implementation where the final key and token values were stored in the GetContactSettingsPref.xml file. Older APK versions can usually be obtained from various APK archive websites available online.
+  
 - __2025-03-31__
+
   This script may not work perfectly yet, and currently it can only retrieve subscription data, view profiles, and search tags. Reverse engineering is necessary to further enhance the features of the script I have made.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
