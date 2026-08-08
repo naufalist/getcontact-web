@@ -129,6 +129,7 @@ You can use an external tool here: [https://tools.naufalist.com/getcontact/crede
 </p>
 
 <div id="getcontact-key-extractor"></div>
+
 ### Extract directly from Getcontact app using LSPosed module
 Alternatively, you can try my **LSPosed module**. It automatically extracts the **Final Key** and **Token** from both older and the latest versions of Getcontact.
 
