@@ -24,6 +24,10 @@
 
 ## Note
 
+- __2026-08-08__
+
+  The latest versions of Getcontact store their credentials in datastore files. To simplify the extraction process, I created LSPosed module that automatically extracts the credentials whenever Getcontact is opened from a fresh start (not resumed from the background). Check out this section for more information: <a href="#getcontact-key-extractor">Getcontact Key Extractor</a>
+
 - __2026-06-20__
 
   It appears that newer versions of GetContact use a different approach for storing both the final key and authentication token. Since I have not yet conducted any analysis or experimentation on the latest releases, I cannot confirm the exact storage mechanism used in those versions. For the time being, you may try downgrading GetContact to a 7.x.x release (for example, version 7.2.0). Based on the last information I remember, version 7 still used the older implementation where the final key and token values were stored in the GetContactSettingsPref.xml file. Older APK versions can usually be obtained from various APK archive websites available online.
@@ -107,9 +111,62 @@ To obtain the final key and token from the GetContact app, I used an Android sma
 
 ## How to get GetContact Final Key & Token (Automatic)
 
+### Generate using web app
 You can use an external tool here: [https://tools.naufalist.com/getcontact/credentials/generate](https://tools.naufalist.com/getcontact/credentials/generate), or you can do this by yourself from `/dashboard/credentials/generate`.
 
 > :exclamation: Due to some limitations, the generate process from the web might sometimes fail because of rate limiting. Therefore, I recommend that you generate the credentials yourself using the feature already available on your local setup.
+
+### Generate using private getcontact app
+1. Download and install this app: [https://naufalist.com/private-getcontact-app/](https://naufalist.com/private-getcontact-app/).
+2. Go to the **Generate Credential** section.
+3. Fill out the form and follow the remaining steps.
+4. Done.
+
+<p align="center">
+  <img src="public/images/generate_creds_using_private_app.png"
+       alt="Generate credential using private app"
+       height="500">
+</p>
+
+<div id="getcontact-key-extractor"></div>
+### Extract directly from Getcontact app using LSPosed module
+Alternatively, you can try my **LSPosed module**. It automatically extracts the **Final Key** and **Token** from both older and the latest versions of Getcontact.
+
+> :information_source: **Requirements:** Your device must be **rooted with Magisk** and have **LSPosed** installed. If you don't know how to install LSPosed modules, there are plenty of tutorials on YouTube. I haven't had time to make a video tutorial yet lol 😄
+
+#### **Step:**
+1. Make sure your device is rooted with Magisk and has LSPosed installed.
+2. Download and install the **Getcontact Key Extractor** app:
+   https://naufalist.com/getcontact-key-extractor-app/
+3. Open **LSPosed**.
+   - Make sure the **Getcontact Key Extractor** module is **enabled**.
+   - Make sure the **Getcontact** app is selected (checked) in the module's app list.
+4. Open the **Getcontact Key Extractor** app.
+   - Grant **root access** when prompted.
+   - Just leave the app running in the background. There's no need to close it, but it's also fine if you do.
+5. Open the **Getcontact** app.
+   - If you are **not signed in**, wait until the **Sign In** screen appears.
+   - If you are **already signed in**, wait until the **main screen** has fully loaded.
+6. Return to the **Getcontact Key Extractor** app.
+   - The **Final Key** and **Token** should appear automatically.
+   - Copy the values.
+7. Done.
+
+#### **Troubleshooting:** If the credentials do not appear in the **Getcontact Key Extractor** app:
+
+1. Force close the **Getcontact** app.
+2. Open **LSPosed** and disable the module, then enable it again.
+3. Make sure the **Getcontact** app is checked in the module's app list.
+4. Repeat **Steps 4 and 5** above.
+
+#### **Proof that it works:**
+
+This guide was tested using **LDPlayer v9.2.6.1**, **Magisk v26.4-kitsune**, and **LSPosed v1.9.2-7024-zygisk**.
+
+
+<p align="center">
+  <img src="public/images/gtckeyextractor.png" alt="Getcontact Key Extractor" height="auto">
+</p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
